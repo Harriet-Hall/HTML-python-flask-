@@ -7,34 +7,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pages.css') }}">
     <title>Mr Podata Head</title>
 </head>
 
 <body>
-<container class="overlay">
-<a class="link" href="{{url_for('home')}}">Back to main page</a>
-<section class="crimes">
-<header>Illegal activity:</header>
-<ul>
-<li>Downloading 1 terabyte of Government po-data</li>
-<li>Selling po-data on the dark web for new body parts</li>
-<li>Leader of the Po-data cult responsible for tampering with server farms all over Europe, planting
-infected
-po-datas </li>
-</ul>
-</section>
-<section class="imagecontainer">
-<img id="podata-head"
-src="https://people.com/thmb/MayGy_E9CakxF3d1SXzo25mjKk8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(704x499:706x501):format(webp)/mr-potato-head-2-81535c3c90494a4eada309828034eedf.jpg"
-alt="Mr Podata Head">
-<button onclick="toPunish()">Punish</button>
+    <container class="overlay">
+        <a class="link" href="{{url_for('home')}}">Back to main page</a>
+        <section class="crimes">
+            <header>Illegal activity:</header>
+            <ul>
+                <li>Downloading 1 terabyte of Government po-data</li>
+                <li>Selling po-data on the dark web for new body parts</li>
+                <li>Leader of the Po-data cult responsible for tampering with server farms all over Europe, planting
+                    infected
+                    po-datas </li>
+            </ul>
+        </section>
+        <section class="imagecontainer">
 
-</section>
-    <footer>$1,000,000,000 reward for his capture, mashed or alive</footer>
+            <img id="podata-head" src="{{url_for('static', filename='images/image1.webp')}}" alt="Mr Podata Head">
+            <button type="button" onclick="change_images()">Punish</button>
 
-</container>
+
+            <script>
+                i = 0
+                function change_images() {
+                    let current_image = document.getElementById('podata-head')
+
+                    images = ['image1.webp', 'image2.jpeg', 'image3.png', 'image4.jpeg']
+
+                    if (i == images.length) {
+                        i = 0
+                    }
+
+                    current_image.src = "{{url_for('static', filename='images/') }}" + images[i];
+                    i++
+
+                }
+            </script>
+
+        </section>
+
+        <span id="base-timer-label" class="base-timer__label">
+        </span>
+        <footer>HURRY it wont last forever!</footer>
+        <script src="{{url_for('static', filename='countdown.js')}}"></script>
+
+    </container>
 </body>
-<!-- <script type="text/javascript" src="./js/index.js"></script> -->
 
 </html>
