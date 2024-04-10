@@ -5,8 +5,6 @@ let countLeft = COUNT_LIMIT;
 let timerInterval = null;
 
 
-window.onload = 
-
 
  function startCount() {
 

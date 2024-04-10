@@ -13,15 +13,17 @@ body {
 
 
 }
+
 .base-timer__label {
-  
- 
+
+
     margin-top: 30%;
     text-align: center;
     color: crimson;
     font-size: 150%;
     text-shadow: 3px 3px black, 0 0 1px rgb(223, 203, 123);
-  }
+}
+
 .overlay {
     display: grid;
     grid-template-columns: 1fr;
@@ -56,16 +58,16 @@ h2 {
     width: auto\9;
     border-right: 12px;
     filter: brightness(85%);
-  
-  left: 0;
-  margin-bottom: 2%;
-  margin-top: 6%;
+
+    left: 0;
+    margin-bottom: 2%;
+    margin-top: 6%;
 
 }
 
 .podata {
     position: absolute;
-    
+
     margin-top: 51%;
     left: 15px;
     max-width: 60%;
@@ -101,7 +103,7 @@ header {
 
 .link {
     font-size: 100%;
-    color:bisque;
+    color: bisque;
     display: flex;
     font-family: "Rye", serif;
 
@@ -152,86 +154,71 @@ button {
 
 
     .overlay {
-
-
         text-align: center;
-
-
     }
 
     h1 {
-  
-
         font-size: 200%;
-
     }
 
     h2 {
-       
         font-size: 90%;
-
     }
 
- 
-
-
-     .wanted {
-  
-    width: 70%;
-    margin-left: 11%;
-    margin-top: 2%;
-
-  
-    
-
+    .wanted {
+        width: 70%;
+        margin-top: 2%;
     }
 
     .podata {
-width: 45%;
-margin-left: 31%;
-margin-top: 33%;
-      
-}
-.link {
-    font-size: 200%;
-}
-header{
-    font-size: 300%;
+        width: 45%;
+        margin-left: 27%;
+        margin-top: 33%;
 
-}
-.crimes {
-    height: 50%;
-    margin-top: 5%;
-}
-ul {
-    font-size: 130%;
-}
+    }
 
-button {
+    .link {
+        font-size: 200%;
+    }
 
-    margin-right: 25%;
-    font-size: 400%;
+    header {
+        font-size: 300%;
 
+    }
 
+    .crimes {
+        height: 50%;
+        margin-top: 5%;
+    }
 
+    ul {
+        font-size: 130%;
+    }
 
-}
-footer {
-    margin-top: 2%;
-    font-size: 400%;
+    button {
 
-}
-.imagecontainer {
-    width: 625px;
-    height: 510px;
-    margin-left: 30%;
-}
+        margin-right: 25%;
+        font-size: 400%;
 
-.base-timer__label {
-    margin-top: 15%;
-    text-align: center;
-    color: crimson;
-    font-size: 400%;
-    text-shadow: 3px 3px black, 0 0 1px rgb(223, 203, 123);
-  }
+    }
+
+    footer {
+        margin-top: 2%;
+        font-size: 400%;
+
+    }
+
+    .imagecontainer {
+        width: 625px;
+        height: 510px;
+        margin-left: 30%;
+    }
+
+    .base-timer__label {
+        margin-top: 15%;
+        text-align: center;
+        color: crimson;
+        font-size: 400%;
+        text-shadow: 3px 3px black, 0 0 1px rgb(223, 203, 123);
+    }
 }
