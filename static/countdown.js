@@ -1,28 +1,35 @@
 const COUNT_LIMIT = 1000000000;
-let countPassed = 0;
-let countLeft = COUNT_LIMIT;
-
+let countLeft 
+let countPassed = 0
 let timerInterval = null;
 
 
 
- function startCount() {
+function startCount(countLeft) {
 
     countInterval = setInterval(() => {
-
-       
-        countPassed = countPassed += 1;
+        countPassed += 1;
         countLeft = COUNT_LIMIT - countPassed;
-
-
-        formattedCountLeft = '$ '+`${countLeft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` + ' reward for his capture, mashed or alive.'
+        formattedCountLeft = '$ ' + `${countLeft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}` + ' reward for his capture, mashed or alive.'
         document.getElementById("base-timer-label").innerHTML = formattedCountLeft
-
-       
-
-    },1000)
+        window.localStorage.setItem("countLeft", countLeft.toString());
+        window.localStorage.setItem("countPassed", countPassed);
+    }, 1000)
 
 };
 
-let currentCount = startCount()
-    window.localStorage(countPassed) 
+
+window.onload = function () {
+    let numLeft = window.localStorage.getItem("countLeft")
+    let numPassed = window.localStorage.getItem("countPassed");
+
+    if (numPassed !== null && numLeft !== null) {
+        countPassed = parseInt(numPassed); 
+        countLeft = parseInt(numLeft);
+
+    } else {
+        countLeft = COUNT_LIMIT
+        window.localStorage.setItem("countLeft", countLeft.toString());
+    }
+startCount(countLeft)
+}
