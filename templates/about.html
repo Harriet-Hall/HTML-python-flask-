@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='pages.css') }}">
-    <title>Mr Podata Head</title>
-</head>
+{% extends "base.html" %}
 
 <body>
-    <container class="overlay">
+    {% block content %}
         <a class="link" href="{{url_for('home')}}">Back to main page</a>
         <section class="crimes">
             <header>Illegal activity:</header>
@@ -53,8 +42,6 @@
         </span>
         <footer>HURRY it wont last forever!</footer>
         <script src="{{url_for('static', filename='countdown.js')}}"></script>
-
-    </container>
+        {% endblock %}
 </body>
 
-</html>
