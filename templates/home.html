@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='pages.css') }}">
-    <title>Mr Podata Head</title>
-</head>
+{% extends "base.html" %}
 
 <body>
-    <container class="overlay">
-
+    {% block content %}
       <header>
     <h1>Mr Podata Head</h1>
     <h2 >Stealing po-data since 1989</h2>
@@ -25,7 +13,6 @@
         alt="Mr Potata Head with hands on his hips"class="podata" />
     </container>
     <a class="link"href="{{url_for('about')}}">Find out more</a>
-</container>
+    {% endblock %}
 </body>
 
-</html>
